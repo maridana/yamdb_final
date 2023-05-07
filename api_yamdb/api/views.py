@@ -12,8 +12,9 @@ from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
 from reviews.models import Category, Genre, Review, Title, User
 
-from api.filters import TitleFilter
 from api_yamdb.settings import DOMAIN_NAME
+
+from api.filters import TitleFilter
 from .mixins import ModelMixinSet
 from .permissions import (AnonimReadOnly, IsAdmin,
                           IsSuperUserIsAdminIsModeratorIsAuthor)
