@@ -2,7 +2,6 @@ from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
 from django.shortcuts import get_object_or_404
-
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import action
@@ -12,6 +11,9 @@ from rest_framework.views import APIView
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
 
+from api.filters import TitleFilter
+from api_yamdb.settings import DOMAIN_NAME
+from reviews.models import Category, Genre, Review, Title, User
 from .mixins import ModelMixinSet
 from .permissions import (AnonimReadOnly, IsAdmin,
                           IsSuperUserIsAdminIsModeratorIsAuthor)
@@ -20,10 +22,6 @@ from .serializers import (CategorySerializer, CommentSerializer,
                           TitleReadSerializer, TitleWriteSerializer,
                           UserCreateSerializer, UserRecieveTokenSerializer,
                           UserSerializer)
-from api.filters import TitleFilter
-from api_yamdb.settings import DOMAIN_NAME
-from reviews.models import Category, Genre, Review, Title, User
-
 EMAIL_YAMDB = f'admin@{DOMAIN_NAME}'
 
 
