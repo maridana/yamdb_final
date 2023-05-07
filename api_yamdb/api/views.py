@@ -23,6 +23,7 @@ from .serializers import (CategorySerializer, CommentSerializer,
                           TitleReadSerializer, TitleWriteSerializer,
                           UserCreateSerializer, UserRecieveTokenSerializer,
                           UserSerializer)
+
 EMAIL_YAMDB = f'admin@{DOMAIN_NAME}'
 
 
