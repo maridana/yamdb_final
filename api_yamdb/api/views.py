@@ -1,3 +1,4 @@
+from api.filters import TitleFilter
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from django.db.models import Avg
@@ -22,7 +23,6 @@ from .serializers import (CategorySerializer, CommentSerializer,
                           TitleReadSerializer, TitleWriteSerializer,
                           UserCreateSerializer, UserRecieveTokenSerializer,
                           UserSerializer)
-from api.filters import TitleFilter
 
 EMAIL_YAMDB = f'admin@{DOMAIN_NAME}'
 
