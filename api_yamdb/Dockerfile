@@ -2,11 +2,11 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-# COPY api_yamdb/requirements.txt /app
-
 COPY . .
 
-RUN pip3 install -r /app/requirements.txt --no-cache-dir
+RUN pip install --upgrade pip && pip install -r /app/requirements.txt --no-cache-dir
+
+#RUN pip3 install -r /app/requirements.txt --no-cache-dir
 
 COPY api_yamdb/ /app
 
