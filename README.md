@@ -93,10 +93,6 @@ docker-compose up -d --build
 ```bash
 docker-compose exec web python manage.py dumpdata > fixtures.json
 ```
-- Остановить и удалить неиспользуемые элементы инфраструктуры Docker:
-```bash
-docker-compose down -v --remove-orphans
-```
 
 ## Авторы
 - Личинин Виталий
