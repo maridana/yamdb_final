@@ -2,11 +2,14 @@
 [![API for YaMDB project workflow](https://github.com/maridana/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/maridana/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 ## Описание
+### Возможности проекта
 Представляет собой расширение возможностей проекта YaMDB для совершения удаленных операций.   
 Благодаря этому проекту зарегистрированные и аутентифицированные пользователи получают 
 возможность оставлять рецензии на произведения различных категорий, 
 комментировать рецензии других пользователей,просматривать сформированные на основе оценок рейтинги произведений. 
 Сайт не предоставляет прямой доступ или ссылки для ознакомления непосредственно с произведениями.
+### Расширение функциональности
+Функционал проекта адаптирован для использования PostgreSQL и развертывания в контейнерах Docker. Используются инструменты CI и CD.
 
 ## Установка
 ### Шаблон описания файла .env
@@ -36,7 +39,7 @@ apt install docker-compose
 - Скопировать файлы docker-compose.yml и default.conf на сервер:
 ```bash
 scp docker-compose.yml <username>@<host>:/home/<username>/docker-compose.yml
-scp default.conf <username>@<host>:/home/<username>/nginx/default.conf
+scp default.conf <username>@<host>:/home/<username>/default.conf
 ```
 - Создать .env файл по предлагаемому выше шаблону.
 - Для работы с Workflow добавить в Secrets GitHub переменные окружения для работы:
